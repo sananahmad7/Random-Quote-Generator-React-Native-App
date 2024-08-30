@@ -32,6 +32,7 @@ const QuoteOfTheDay = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.QOTD}>Quote of the Day</Text>
       <Text style={styles.quoteText}>{quote}</Text>
     </View>
   );
@@ -44,6 +45,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#f9f9f9",
     borderRadius: 5,
     width: "100%",
+  },
+  QOTD: {
+    fontSize: 22,
+    fontStyle: "italic",
+    textAlign: "center",
+    fontWeight: "bold",
   },
   quoteText: {
     fontSize: 18,

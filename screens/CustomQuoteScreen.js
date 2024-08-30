@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CustomQuote from "../components/CustomQuote";
-import { StyleSheet, View, FlatList, Text } from "react-native";
+import { StyleSheet, View, FlatList, Text, Image } from "react-native";
 
 const CustomQuoteScreen = () => {
   const [customQuotes, setCustomQuotes] = useState([]);
@@ -12,6 +12,10 @@ const CustomQuoteScreen = () => {
 
   return (
     <View style={styles.container}>
+      <Image
+        style={styles.i1}
+        source={require("../assets/mountain.png")} // Ensure the path and filename are correct
+      />
       <CustomQuote onAddQuote={addCustomQuote} />
       <FlatList
         data={customQuotes}
@@ -35,6 +39,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
+  },
+  i1: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    resizeMode: "cover", // Use cover to fill the background
   },
   quoteContainer: {
     marginTop: 10,
